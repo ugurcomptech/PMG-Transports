@@ -35,3 +35,26 @@ Relaying işlemi şu durumlarda kullanılır:
 
 - PMG’nin, giden e-postaları bir SMTP relay sunucusuna göndermesi.
 - E-posta gönderimi sırasında IP adresinin gizlenmesi veya birden fazla e-posta sunucusu arasında güvenli bir bağlantı sağlanması.
+
+### Örnek Kullanım:
+Bir şirketin giden tüm e-postalarını, ISP tarafından sağlanan bir SMTP sunucusu (örneğin smtp.isp.com) üzerinden yönlendirmek için relaying yapılandırması yapılır.
+
+### Transport Nedir?
+Transport ise gelen e-postaların belirli bir domain veya kullanıcıya göre doğru sunucuya iletilmesini sağlar. Yani transport, gelen e-postaların hangi hedef sunucuya yönlendirilmesi gerektiğini belirler. PMG üzerinde, belirli domainler için özel transport kuralları tanımlayarak e-postaların doğru alıcı sunucuya ulaşmasını sağlayabilirsiniz.
+
+### Örnek Kullanım:
+test.com domainine gelen tüm e-postaların, dahili bir e-posta sunucusuna (örneğin mail.test.com) yönlendirilmesi için transport yapılandırması yapılır.
+
+
+| **Özellik**              | **Relaying**                                      | **Transport**                                      |
+|---------------------------|--------------------------------------------------|---------------------------------------------------|
+| **Amaç**                  | Giden e-postaları başka bir sunucuya yönlendirmek | Gelen e-postaları doğru alıcı sunucuya yönlendirmek |
+| **Kullanım Alanı**        | SMTP relay sunucuları                             | Farklı domainler için alıcı sunucu yapılandırması  |
+| **İşlem Yönü**            | Çıkış (Giden e-postalar)                         | Giriş (Gelen e-postalar)                          |
+| **Örnek Kullanım Durumu** | Giden e-postaları bir SMTP relay sunucusuna yönlendirmek | Belirli bir domain için gelen e-postaları alıcı sunucuya yönlendirmek |
+
+
+
+## Kaynakça
+[Relay Domains vs. Transports](https://forum.proxmox.com/threads/relay-domains-vs-transports.51925/)
+
