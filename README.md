@@ -18,3 +18,6 @@ Sol menü üzerinden Mail proxy >> Transports sayfasına geliyoruz.
 | **Port**          | `25`              | Alıcı sunucuya bağlanmak için kullanılan port (varsayılan: 25).           |
 | **Use MX**        | `false`           | Eğer bu seçenek etkinse, relay domain için DNS'teki MX kayıtları kullanılır. |
 | **Comment**       | (Boş)             | Bu alana, kayıt hakkında açıklama eklenebilir (örneğin: "Test için yapılandırma"). |
+
+
+Burada, yeni bir transport kuralı eklemek için Ekle (Add) butonuna tıklayın. Açılan pencerede, gelen e-postaların hangi domain için hangi alıcı sunucuya (relay) iletileceğini belirlemek üzere ilgili alanları doldurun. Örneğin, test.com domainine gelen tüm e-postaların mail.test.com sunucusuna iletilmesini istiyorsanız, bu bilgileri doğru şekilde girin ve kaydedin. Bu işlemden sonra, Proxmox Mail Gateway otomatik olarak test.com için gelen tüm e-postaları belirtilen relay sunucusuna yönlendirecektir.
