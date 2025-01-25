@@ -8,7 +8,6 @@ Bu repo, Proxmox Mail Gateway (PMG) üzerinde farklı domainler için alıcı su
 
 Sol menü üzerinden Mail proxy >> Transports sayfasına geliyoruz.
 
-
 ![Yeni Proje (1)](https://github.com/user-attachments/assets/498b1fe9-02f4-40d9-82a6-7be24d0ed56e)
 
  **Alan**         | **Değer Örneği**  | **Açıklama**                                                              |
@@ -22,3 +21,17 @@ Sol menü üzerinden Mail proxy >> Transports sayfasına geliyoruz.
 
 
 Burada, yeni bir transport kuralı eklemek için Ekle (Add) butonuna tıklayın. Açılan pencerede, gelen e-postaların hangi domain için hangi alıcı sunucuya (relay) iletileceğini belirlemek üzere ilgili alanları doldurun. Örneğin, test.com domainine gelen tüm e-postaların mail.test.com sunucusuna iletilmesini istiyorsanız, bu bilgileri doğru şekilde girin ve kaydedin. Bu işlemden sonra, Proxmox Mail Gateway otomatik olarak test.com için gelen tüm e-postaları belirtilen relay sunucusuna yönlendirecektir.
+
+ **Not:** Relay Domains sayfası üzerinden işlem yapılacak olan domaini eklemeyi unutmayınız.
+
+
+ ## Relaying ve Transport İşlemlerinin Farkı
+
+Relaying ve Transport, her ikisi de e-posta yönlendirme ile ilgilidir, ancak kullanım amaçları ve işlevleri farklıdır:
+
+### Relaying Nedir?
+Relaying, bir e-posta sunucusunun gelen veya giden e-postaları başka bir sunucuya iletmesidir. Genellikle giden e-postalar için kullanılır. Örneğin, şirketinizdeki tüm kullanıcıların giden e-postalarını bir SMTP relay sunucusu üzerinden yönlendirmek isteyebilirsiniz. Bu, genelde güvenilirlik ve güvenlik politikaları için yapılır.
+Relaying işlemi şu durumlarda kullanılır:
+
+- PMG’nin, giden e-postaları bir SMTP relay sunucusuna göndermesi.
+- E-posta gönderimi sırasında IP adresinin gizlenmesi veya birden fazla e-posta sunucusu arasında güvenli bir bağlantı sağlanması.
