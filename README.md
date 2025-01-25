@@ -8,7 +8,7 @@ Bu repo, Proxmox Mail Gateway (PMG) üzerinde farklı domainler için alıcı su
 
 Sol menü üzerinden Mail proxy >> Transports sayfasına geliyoruz.
 
-![image](https://github.com/user-attachments/assets/db0d829e-0db4-4e9f-b786-052545502ade)
+![image](https://github.com/user-attachments/assets/72dc3d6d-30fd-4d3c-9dd9-1d6248006705)
 
  **Alan**         | **Değer Örneği**  | **Açıklama**                                                              |
 |-------------------|-------------------|----------------------------------------------------------------------------|
