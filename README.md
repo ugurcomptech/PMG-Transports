@@ -2,6 +2,8 @@
 
 Bu repo, Proxmox Mail Gateway (PMG) üzerinde farklı domainler için alıcı sunucuların nasıl yapılandırılacağını (transport ayarları) detaylı bir şekilde açıklamaktadır. Transporte, gelen e-postaların belirli domainlere göre doğru alıcı sunuculara yönlendirilmesini sağlar. Bu yapılandırma, e-posta trafiğinin yönetimini kolaylaştırır ve çoklu domain desteği sunar.
 
+![asdd](https://github.com/user-attachments/assets/eb11cc4e-8775-4d5b-bc73-95d458d83262)
+
 ## Transports
 
 Sol menü üzerinden Mail proxy >> Transports sayfasına geliyoruz.
@@ -51,7 +53,6 @@ test.com domainine gelen tüm e-postaların, dahili bir e-posta sunucusuna (örn
 | **İşlem Yönü**            | Çıkış (Giden e-postalar)                         | Giriş (Gelen e-postalar)                          |
 | **Örnek Kullanım Durumu** | Giden e-postaları bir SMTP relay sunucusuna yönlendirmek | Belirli bir domain için gelen e-postaları alıcı sunucuya yönlendirmek |
 
-![asdd](https://github.com/user-attachments/assets/eb11cc4e-8775-4d5b-bc73-95d458d83262)
 
 
 
